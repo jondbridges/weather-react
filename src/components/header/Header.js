@@ -1,18 +1,19 @@
 import React from 'react';
-import Search from '../search/Search';
+import { Link } from 'react-router';
+import SearchContainer from '../search/SearchContainer';
 
 const Header = () => {
   return (
     <nav className="navbar navbar-default">
       <div className="container-fluid">
         <div className="navbar-header">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Fancy Pancy Weather
-          </a>
+          </Link>
         </div>
-        <form className="navbar-form navbar-right">
-          <Search />
-        </form>
+        <div className="navbar-form navbar-right">
+          <SearchContainer />
+        </div>
       </div>
     </nav>
   );

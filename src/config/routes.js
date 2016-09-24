@@ -8,6 +8,6 @@ import ForecastPage from '../components/forecast/ForecastPage';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={ HomePage } />
-    <Route path="/forecast" component={ ForecastPage } />
+    <Route path="/forecast/:cityState" component={ ForecastPage } />
   </Route>
 );
