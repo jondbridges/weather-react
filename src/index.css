@@ -25,7 +25,7 @@ html, body, #root, .app {
   margin-left: 10px;
 }
 
-.main-content {
+.home-content {
   background-size: cover;
   background-image: url('../public/images/pattern.svg');
   color: white;
@@ -34,3 +34,4 @@ html, body, #root, .app {
   height: 92%;
   width: 100%;
 }
+
