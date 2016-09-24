@@ -27,7 +27,7 @@ html, body, #root, .app {
 
 .home-content {
   background-size: cover;
-  background-image: url('pattern.svg');
+  background-image: url('../public/images/pattern.svg');
   display: flex;
   flex-direction: column;
   justify-content: center;
