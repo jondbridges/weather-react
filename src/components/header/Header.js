@@ -10,7 +10,9 @@ const Header = () => {
             Fancy Pancy Weather
           </a>
         </div>
-        <Search />
+        <form className="navbar-form navbar-right">
+          <Search />
+        </form>
       </div>
     </nav>
   );
