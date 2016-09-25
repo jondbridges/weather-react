@@ -28,10 +28,34 @@ html, body, #root, .app {
 .home-content {
   background-size: cover;
   background-image: url('/images/pattern.svg');
-  color: white;
   display: flex;
   align-items: center;
   height: 92%;
   width: 100%;
 }
 
+.home-search-label {
+  color: white;
+  font-weight: 100;
+  font-size: 35px;
+}
+
+.forecast-header {
+  font-weight: 200;
+}
+
+.forecast-header > small {
+  font-weight: 100;
+}
+
+.forecast-card {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+.weather-icon {
+  height: 130px;
+  margin-bottom: 10px;
+}

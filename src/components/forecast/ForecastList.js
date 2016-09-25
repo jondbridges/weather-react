@@ -1,13 +1,13 @@
 import React from 'react';
+import ForecastDay from './ForecastDay';
 
 const ForecastList = ({forecastDays}) => {
   return (
-    <div>
+    <div className="forecast row">
       {forecastDays.map(forecastDay =>
-        <li key={forecastDay.id}>
-          <img src={"/images/weather-icons/" + forecastDay.conditionIcon + ".svg"} alt="Weather" />
-          {forecastDay.date} : {forecastDay.conditionIcon}
-        </li>
+        <div className="col-xs-6 col-sm-4 col-md-3">
+          <ForecastDay key={forecastDay.id} forecastDay={forecastDay} />
+        </div>
       )}
     </div>
   );

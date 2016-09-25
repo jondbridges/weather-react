@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container-fluid">
         <div className="navbar-header">
           <Link className="navbar-brand" to="/">
-            Fancy Pancy Weather
+            React Weather Inc
           </Link>
         </div>
         <div className="navbar-form navbar-right">

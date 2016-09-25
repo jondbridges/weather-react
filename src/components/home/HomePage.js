@@ -6,7 +6,7 @@ class HomePage extends React.Component {
     return (
       <div className="container home-content">
         <div className="col-md-4 col-md-offset-4 text-center">
-          <h2>Enter a City and State</h2>
+          <div className="home-search-label">Enter a City and State</div>
           <SearchContainer />
         </div>
       </div>

@@ -27,7 +27,7 @@ class ForecastPage extends React.Component {
     return (
       <div className="container">
         <div className="page-header">
-          <h1 className="center-text">
+          <h1 className="forecast-header">
             {this.props.routeParams.cityState} <small>Select a day</small>
           </h1>
         </div>
