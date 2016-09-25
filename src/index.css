@@ -48,11 +48,14 @@ html, body, #root, .app {
   font-weight: 100;
 }
 
-.forecast-card {
+.forecast-day {
   margin-top: 20px;
   padding: 10px;
   font-size: 1.8em;
   font-weight: 100;
+}
+
+.forecast-card {
   cursor: pointer;
   border-radius: 10px;
 }
