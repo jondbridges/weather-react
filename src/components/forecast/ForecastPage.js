@@ -12,7 +12,15 @@ class ForecastPage extends React.Component {
   }
 
   componentDidMount() {
-    WeatherService.getForecast(this.props.routeParams.cityState)
+    this.fetchForecastDays(this.props.routeParams.cityState)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.fetchForecastDays(nextProps.routeParams.cityState);
+  }
+
+  fetchForecastDays(cityState) {
+    WeatherService.getForecast(cityState)
       .then(forecastDays => {
         this.setState({
           forecastDays: forecastDays

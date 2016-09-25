@@ -5,8 +5,8 @@ const ForecastList = ({forecastDays}) => {
   return (
     <div className="forecast row">
       {forecastDays.map(forecastDay =>
-        <div className="col-xs-6 col-sm-4 col-md-3">
-          <ForecastDay key={forecastDay.id} forecastDay={forecastDay} />
+        <div key={forecastDay.id} className="col-xs-6 col-sm-4 col-md-3">
+          <ForecastDay forecastDay={forecastDay} />
         </div>
       )}
     </div>
