@@ -3,8 +3,8 @@ import WeatherService from '../../services/weatherService';
 import ForecastList from './ForecastList';
 
 class ForecastPage extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
       forecastDays: []
@@ -31,6 +31,10 @@ class ForecastPage extends React.Component {
       });
   }
 
+  handleDaySelect = (forecastDay) => {
+    console.log(forecastDay);
+  };
+
   render() {
     return (
       <div className="container">
@@ -39,7 +43,9 @@ class ForecastPage extends React.Component {
             {this.props.routeParams.cityState} <small>Select a day</small>
           </h1>
         </div>
-        <ForecastList forecastDays={this.state.forecastDays} />
+        <ForecastList
+          forecastDays={this.state.forecastDays}
+          onDaySelect={this.handleDaySelect} />
       </div>
     );
   }
