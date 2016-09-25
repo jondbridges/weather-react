@@ -68,3 +68,8 @@ html, body, #root, .app {
   height: 130px;
   margin-bottom: 10px;
 }
+
+.detail {
+  font-weight: 100;
+  font-size: 2em;
+}
