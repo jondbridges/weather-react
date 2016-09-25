@@ -8,7 +8,7 @@ class ForecastPage extends React.Component {
 
     this.state = {
       forecastDays: []
-    }
+    };
   }
 
   componentDidMount() {
@@ -32,7 +32,12 @@ class ForecastPage extends React.Component {
   }
 
   handleDaySelect = (forecastDay) => {
-    console.log(forecastDay);
+    this.context.router.push({
+      pathname: `/detail/${this.props.routeParams.cityState}`,
+      state: {
+        forecastDay
+      }
+    });
   };
 
   render() {
@@ -50,5 +55,9 @@ class ForecastPage extends React.Component {
     );
   }
 }
+
+ForecastPage.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
 
 export default ForecastPage;

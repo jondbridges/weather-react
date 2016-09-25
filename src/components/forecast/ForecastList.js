@@ -20,7 +20,7 @@ const ForecastList = ({forecastDays, onDaySelect}) => {
 
 ForecastList.propTypes = {
   forecastDays: React.PropTypes.array.isRequired,
-  onDaySelect: React.PropTypes.func
+  onDaySelect: React.PropTypes.func.isRequired
 };
 
 export default ForecastList;

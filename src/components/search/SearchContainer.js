@@ -31,7 +31,7 @@ class SearchContainer extends React.Component {
 }
 
 SearchContainer.contextTypes = {
-  router: React.PropTypes.object
+  router: React.PropTypes.object.isRequired
 };
 
 export default SearchContainer;
