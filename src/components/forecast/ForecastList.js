@@ -4,8 +4,9 @@ const ForecastList = ({forecastDays}) => {
   return (
     <div>
       {forecastDays.map(forecastDay =>
-        <li key={forecastDay.date.unix()}>
-          {forecastDay.date.format('dddd, MMM D')} : {forecastDay.icon}
+        <li key={forecastDay.id}>
+          <img src={"/images/weather-icons/" + forecastDay.conditionIcon + ".svg"} alt="Weather" />
+          {forecastDay.date} : {forecastDay.conditionIcon}
         </li>
       )}
     </div>

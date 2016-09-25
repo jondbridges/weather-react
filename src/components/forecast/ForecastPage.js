@@ -12,7 +12,7 @@ class ForecastPage extends React.Component {
   }
 
   componentDidMount() {
-    WeatherService.getFiveDayForecast(this.props.routeParams.cityState)
+    WeatherService.getForecast(this.props.routeParams.cityState)
       .then(forecastDays => {
         this.setState({
           forecastDays: forecastDays
@@ -25,8 +25,12 @@ class ForecastPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.props.routeParams.cityState}</h1>
+      <div className="container">
+        <div className="page-header">
+          <h1 className="center-text">
+            {this.props.routeParams.cityState} <small>Select a day</small>
+          </h1>
+        </div>
         <ForecastList forecastDays={this.state.forecastDays} />
       </div>
     );
