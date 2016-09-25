@@ -3,7 +3,7 @@ import ForecastDay from './ForecastDay';
 
 const ForecastList = ({forecastDays, onDaySelect}) => {
   return (
-    <div className="forecast row">
+    <div className="row forecast">
       {forecastDays.map(forecastDay =>
         <div
           key={forecastDay.id}
