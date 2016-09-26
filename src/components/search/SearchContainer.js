@@ -17,7 +17,9 @@ class SearchContainer extends React.Component {
   };
 
   handleSubmitSearch = () => {
-    this.context.router.push('/forecast/' + this.state.cityState);
+    if (this.state.cityState) {
+      this.context.router.push('/forecast/' + this.state.cityState);
+    }
   };
 
   render() {
