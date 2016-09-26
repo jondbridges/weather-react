@@ -8,8 +8,8 @@ import DetailPage from '../components/forecast/detail/DetailPage';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={ HomePage } />
-    <Route path="/forecast/:cityState" component={ ForecastPage } />
-    <Route path="/detail/:cityState" component={ DetailPage } />
+    <IndexRoute component={HomePage} />
+    <Route path="/forecast/:cityState" component={ForecastPage} />
+    <Route path="/detail/:cityState" component={DetailPage} />
   </Route>
 );
