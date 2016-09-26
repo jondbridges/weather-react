@@ -25,6 +25,10 @@ html, body, #root, .app {
   color: white;
 }
 
+.navbar-default .navbar-brand:focus {
+  color: white;
+}
+
 .btn-pad-left {
   margin-left: 10px;
 }
