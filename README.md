@@ -1,6 +1,6 @@
 Simple weather app using the http://openweathermap.org/ API.
 
-Requires Node 4.x or higher. Base app created using [react cli](https://github.com/facebookincubator/create-react-app).
+Requires Node 4.x or higher. Base app created using [react-cli](https://github.com/facebookincubator/create-react-app).
 
 To start a local dev server:
 ```

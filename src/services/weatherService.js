@@ -10,6 +10,9 @@ class WeatherService {
       .then(resp => {
         return resp.data.list
           .map(day => convertToForecastDay(day));
+      })
+      .catch(error => {
+        console.error('There was an error getting the five day weather forecast', error);
       });
   }
 }
