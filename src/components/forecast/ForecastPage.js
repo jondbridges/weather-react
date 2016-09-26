@@ -7,7 +7,8 @@ class ForecastPage extends React.Component {
     super(props, context);
 
     this.state = {
-      forecastDays: []
+      forecastDays: [],
+      isLoading: true
     };
   }
 
@@ -23,7 +24,8 @@ class ForecastPage extends React.Component {
     WeatherService.getForecast(cityState)
       .then(forecastDays => {
         this.setState({
-          forecastDays: forecastDays
+          forecastDays: forecastDays,
+          isLoading: false
         });
       })
       .catch(err => {
@@ -50,6 +52,7 @@ class ForecastPage extends React.Component {
         </div>
         <ForecastList
           forecastDays={this.state.forecastDays}
+          isLoading={this.state.isLoading}
           onDaySelect={this.handleDaySelect} />
       </div>
     );

@@ -21,6 +21,10 @@ html, body, #root, .app {
   font-size: 2em;
 }
 
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
+
 .btn-pad-left {
   margin-left: 10px;
 }
@@ -61,7 +65,7 @@ html, body, #root, .app {
 }
 
 .forecast-card:hover {
-  background-color: rgba(80, 131, 133, 0.08);
+  background-color: rgba(80, 131, 15, 0.05);
 }
 
 .weather-icon {

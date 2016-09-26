@@ -1,7 +1,13 @@
 import React from 'react';
 import ForecastDay from './ForecastDay';
 
-const ForecastList = ({forecastDays, onDaySelect}) => {
+const ForecastList = ({forecastDays, isLoading, onDaySelect}) => {
+  if (isLoading) {
+    return (
+      <div>Loading...</div>
+    );
+  }
+
   return (
     <div className="row forecast">
       {forecastDays.map(forecastDay =>
@@ -20,6 +26,7 @@ const ForecastList = ({forecastDays, onDaySelect}) => {
 
 ForecastList.propTypes = {
   forecastDays: React.PropTypes.array.isRequired,
+  isLoading: React.PropTypes.bool.isRequired,
   onDaySelect: React.PropTypes.func.isRequired
 };
 
