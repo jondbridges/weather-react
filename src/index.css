@@ -65,7 +65,7 @@ html, body, #root, .app {
 }
 
 .forecast-card:hover {
-  background-color: rgba(80, 131, 15, 0.05);
+  background-color: rgba(80, 131, 15, 0.06);
 }
 
 .weather-icon {
@@ -76,4 +76,8 @@ html, body, #root, .app {
 .detail {
   font-weight: 100;
   font-size: 2em;
+}
+
+.detail label {
+  font-weight: 200;
 }

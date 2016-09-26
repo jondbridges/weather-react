@@ -24,8 +24,8 @@ function convertToForecastDay(day) {
     date: moment.unix(day.dt).format('dddd, MMM D'),
     conditionIcon: day.weather[0].icon,
     desc: day.weather[0].description,
-    minTemp: day.temp.min,
-    maxTemp: day.temp.max,
+    minTemp: Math.round(day.temp.min),
+    maxTemp: Math.round(day.temp.max),
     humidity: day.humidity
   };
 }
