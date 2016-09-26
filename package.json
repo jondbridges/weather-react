@@ -2,7 +2,6 @@
   "name": "weather-cli",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jondbridges.github.io/weather-react",
   "devDependencies": {
     "react-scripts": "0.5.1"
   },
