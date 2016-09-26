@@ -1,27 +1,30 @@
 import React from 'react';
 import ForecastDay from './ForecastDay';
+import Spinner from '../spinner/Spinner';
 
 const ForecastList = ({forecastDays, isLoading, onDaySelect}) => {
   if (isLoading) {
     return (
-      <div>Loading...</div>
+      <div className="col-md-4 col-md-offset-4 text-center">
+        <Spinner />
+      </div>
+    );
+  } else {
+    return (
+      <div className="row">
+        {forecastDays.map(forecastDay =>
+          <div
+            key={forecastDay.id}
+            className="col-xs-6 col-sm-4 col-md-3 forecast-card"
+            onClick={() => onDaySelect(forecastDay)}>
+            <ForecastDay
+              forecastDay={forecastDay}
+            />
+          </div>
+        )}
+      </div>
     );
   }
-
-  return (
-    <div className="row forecast">
-      {forecastDays.map(forecastDay =>
-        <div
-          key={forecastDay.id}
-          className="col-xs-6 col-sm-4 col-md-3 forecast-card"
-          onClick={() => onDaySelect(forecastDay)}>
-          <ForecastDay
-            forecastDay={forecastDay}
-          />
-        </div>
-      )}
-    </div>
-  );
 };
 
 ForecastList.propTypes = {
