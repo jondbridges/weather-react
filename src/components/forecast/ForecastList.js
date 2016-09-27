@@ -11,15 +11,13 @@ const ForecastList = ({forecastDays, isLoading, onDaySelect}) => {
     );
   } else {
     return (
-      <div className="row">
+      <div>
         {forecastDays.map(forecastDay =>
           <div
             key={forecastDay.id}
             className="col-xs-6 col-sm-4 col-md-3 forecast-card"
             onClick={() => onDaySelect(forecastDay)}>
-            <ForecastDay
-              forecastDay={forecastDay}
-            />
+            <ForecastDay forecastDay={forecastDay} />
           </div>
         )}
       </div>
