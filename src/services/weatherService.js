@@ -12,6 +12,7 @@ class WeatherService {
           .map(day => convertToForecastDay(day));
       })
       .catch(error => {
+        // Show a friendly message in a production app.
         console.error('There was an error getting the five day weather forecast', error);
       });
   }

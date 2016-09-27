@@ -29,6 +29,7 @@ class ForecastPage extends React.Component {
         });
       })
       .catch(err => {
+        // Show a friendly message in a production app.
         console.error('There was an error getting five day forecast.', err);
       });
   }
