@@ -2,7 +2,7 @@ import axios from 'axios';
 import moment from 'moment';
 
 const APP_ID = 'f6ea15ddd1b9a6e5f6911074912b7eb6';
-const FORECAST_URL = `http://api.openweathermap.org/data/2.5/forecast/daily?appid=${APP_ID}&mode=json&units=imperial`;
+export const FORECAST_URL = `http://api.openweathermap.org/data/2.5/forecast/daily?appid=${APP_ID}&mode=json&units=imperial`;
 
 class WeatherService {
   static getForecast(cityState) {
