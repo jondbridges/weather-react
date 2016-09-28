@@ -9,7 +9,7 @@ const Header = () => {
         <div className="navbar-header">
           <Link className="navbar-brand" to="/">
             <img src="/images/react-logo.svg" alt="React" />
-            React Weather App
+            React Weather
           </Link>
         </div>
         <div className="navbar-form navbar-right">
