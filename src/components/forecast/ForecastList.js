@@ -6,7 +6,7 @@ const ForecastList = ({forecastDays, isLoading, onDaySelect}) => {
   if (isLoading) {
     return (
       <div className="col-md-4 col-md-offset-4 text-center">
-        <Spinner />
+        <Spinner displayText="Loading..."/>
       </div>
     );
   } else {
