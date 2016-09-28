@@ -18,6 +18,8 @@ html, body, #root, .app {
 
 .navbar-default .navbar-brand {
   color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 2em;
 }
 
@@ -27,6 +29,13 @@ html, body, #root, .app {
 
 .navbar-default .navbar-brand:focus {
   color: white;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  margin: 0 5px 5px 0;
 }
 
 .btn-pad-left {

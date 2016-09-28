@@ -8,6 +8,7 @@ const Header = () => {
       <div className="container-fluid">
         <div className="navbar-header">
           <Link className="navbar-brand" to="/">
+            <img src="/images/react-logo.svg" alt="React" />
             React Weather App
           </Link>
         </div>
