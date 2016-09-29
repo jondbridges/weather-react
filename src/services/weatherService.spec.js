@@ -1,6 +1,7 @@
 import WeatherService, {FORECAST_URL} from './weatherService';
 import weatherServiceTestData from './weatherServiceTestData';
 import axios from 'axios';
+import moment from 'moment';
 
 describe('getForecast', () => {
 
@@ -28,6 +29,27 @@ describe('getForecast', () => {
         .then(days => {
           expect(days.length).toBe(5);
         });
+    });
+
+    it('converts data to forecast days model', () => {
+      WeatherService.getForecast('St. Louis')
+        .then(days => days.map(day => {
+          expect(day.id).toBeDefined();
+          expect(day.date).toBeDefined();
+          expect(day.conditionIcon).toBeDefined();
+          expect(day.desc).toBeDefined();
+          expect(day.minTemp).toBeDefined();
+          expect(day.maxTemp).toBeDefined();
+          expect(day.humidity).toBeDefined();
+        }));
+    });
+
+    it('converts each date to a valid formatted date', () => {
+      WeatherService.getForecast('Boise')
+        .then(days => days.map(day => {
+          let isValidDate = moment(day.date, 'dddd, MMM D').isValid();
+          expect(isValidDate).toBe(true);
+        }));
     });
   });
 
