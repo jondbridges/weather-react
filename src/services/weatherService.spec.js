@@ -9,7 +9,7 @@ describe('getForecast', () => {
 
     beforeEach(() => {
       axios.get = jest.fn(() => {
-        return new Promise( resolve => resolve({data: weatherServiceTestData }) )
+        return new Promise( resolve => resolve({data: weatherServiceTestData }) );
       });
     });
 
