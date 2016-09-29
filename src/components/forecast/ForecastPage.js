@@ -1,6 +1,7 @@
 import React from 'react';
 import WeatherService from '../../services/weatherService';
 import ForecastList from './ForecastList';
+import './Forecast.css';
 
 class ForecastPage extends React.Component {
   constructor(props, context) {
@@ -47,7 +48,7 @@ class ForecastPage extends React.Component {
     return (
       <div className="container">
         <div className="page-header">
-          <h1 className="forecast-header">
+          <h1 className="Forecast-header">
             {this.props.routeParams.cityState} <small>Select a day</small>
           </h1>
         </div>

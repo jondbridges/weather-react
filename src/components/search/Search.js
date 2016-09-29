@@ -1,4 +1,5 @@
 import React from 'react';
+import './Search.css';
 
 const Search = ({onUpdateSearch, onSubmitSearch}) => {
   return (
@@ -9,7 +10,7 @@ const Search = ({onUpdateSearch, onSubmitSearch}) => {
           onChange={onUpdateSearch} />
       </div>
       <button
-        className="btn btn-success btn-pad-left" type="submit"
+        className="btn btn-success Search-btn-pad-left" type="submit"
         onClick={onSubmitSearch}>
         Get Weather
       </button>

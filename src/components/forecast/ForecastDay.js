@@ -1,9 +1,10 @@
 import React from 'react';
+import './Forecast.css';
 
 const ForecastDay = ({forecastDay}) => {
   return (
-    <div className="forecast-day">
-      <img className="center-block weather-icon" src={"/images/weather-icons/" + forecastDay.conditionIcon + ".svg"} alt="Weather" />
+    <div className="Forecast-day">
+      <img className="center-block Forecast-weather-icon" src={"/images/weather-icons/" + forecastDay.conditionIcon + ".svg"} alt="Weather" />
       <div className="text-center">{forecastDay.date}</div>
     </div>
   );

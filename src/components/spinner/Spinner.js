@@ -1,15 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-
-const styles = {
-  spinner: {
-    padding: '0 10px'
-  },
-  spinnerText: {
-    fontSize: '45px',
-    fontWeight: 100
-  }
-};
+import './Spinner.css';
 
 const Spinner = ({displayText}) => {
   return (
@@ -18,9 +9,9 @@ const Spinner = ({displayText}) => {
         name='circle-o-notch'
         size='3x'
         spin
-        style={styles.spinner}
+        className="Spinner-icon"
       />
-      <span style={styles.spinnerText}>{displayText}</span>
+      <span className="Spinner-text">{displayText}</span>
     </div>
   );
 };

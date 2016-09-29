@@ -1,0 +1,28 @@
+.Forecast-header {
+  font-weight: 200;
+}
+
+.Forecast-header > small {
+  font-weight: 100;
+}
+
+.Forecast-day {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+.Forecast-card {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.Forecast-card:hover {
+  background-color: rgba(80, 120, 140, 0.06);
+}
+
+.Forecast-weather-icon {
+  height: 130px;
+  margin-bottom: 10px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import ForecastDay from './ForecastDay';
 import Spinner from '../spinner/Spinner';
+import './Forecast.css';
 
 const ForecastList = ({forecastDays, isLoading, onDaySelect}) => {
   if (isLoading) {
@@ -15,7 +16,7 @@ const ForecastList = ({forecastDays, isLoading, onDaySelect}) => {
         {forecastDays.map(forecastDay =>
           <div
             key={forecastDay.id}
-            className="col-xs-6 col-sm-4 col-md-3 forecast-card"
+            className="col-xs-6 col-sm-4 col-md-3 Forecast-card"
             onClick={() => onDaySelect(forecastDay)}>
             <ForecastDay forecastDay={forecastDay} />
           </div>

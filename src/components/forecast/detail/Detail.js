@@ -1,9 +1,10 @@
 import React from 'react';
 import ForecastDay from '../ForecastDay';
+import './Detail.css';
 
 const Detail = ({forecastDay, cityState}) => {
   return (
-    <div className="detail">
+    <div className="Detail-container">
       <ForecastDay forecastDay={forecastDay} />
       <div className="col-md-4 col-md-offset-4 text-center">
         <p>{cityState}</p>
