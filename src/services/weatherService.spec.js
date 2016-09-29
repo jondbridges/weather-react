@@ -8,7 +8,7 @@ describe('getForecast', () => {
   describe('when successful API call', () => {
 
     beforeEach(() => {
-      // mock get promise return with test data
+      // Mock axios.get to return a promise which resolves with the test data.
       axios.get = jest.fn(() => {
         return new Promise( resolve => resolve({data: weatherServiceTestData }) );
       });
@@ -23,14 +23,16 @@ describe('getForecast', () => {
         .lastCalledWith(FORECAST_URL + '&q=' + cityName + '&cnt=5');
     });
 
-    it('returns a list of 5 forecast days', () => {
+    it('returns a list of 5 forecast days', (done) => {
       WeatherService.getForecast('St. Louis')
         .then(days => {
           expect(days.length).toBe(5);
+
+          done();
         });
     });
 
-    it('converts data to forecast days model', () => {
+    it('converts data to forecast days model', (done) => {
       WeatherService.getForecast('St. Louis')
         .then(days => days.map(day => {
           expect(day.id).toBeDefined();
@@ -40,14 +42,18 @@ describe('getForecast', () => {
           expect(day.minTemp).toBeDefined();
           expect(day.maxTemp).toBeDefined();
           expect(day.humidity).toBeDefined();
+
+          done();
         }));
     });
 
-    it('converts each date to a valid formatted date', () => {
+    it('converts each date to a valid formatted date', (done) => {
       WeatherService.getForecast('Boise')
         .then(days => days.map(day => {
           let isValidDate = moment(day.date, 'dddd, MMM D').isValid();
           expect(isValidDate).toBe(true);
+
+          done();
         }));
     });
 
@@ -55,15 +61,30 @@ describe('getForecast', () => {
 
   describe('when API call errors', () => {
 
-    it('no days are returned', () => {
-      // mock get promise return with a failure
+    const errorMessage = 'Error Occured';
+    beforeEach(() => {
+      // Mock axios.get to return a promise which rejects with an error message.
       axios.get = jest.fn(() => {
-        return new Promise((resolve, reject) => reject());
+        return new Promise((resolve, reject) => reject(errorMessage));
       });
+    });
 
+    it('logs error message', (done) => {
+      WeatherService.getForecast('Boise, ID')
+        .then(() => {
+          expect(console.error)
+            .lastCalledWith('There was an error getting the five day weather forecast', errorMessage);
+
+          done();
+        });
+    });
+
+    it('returns no days', (done) => {
       WeatherService.getForecast('Boise, ID')
         .then(days => {
           expect(days).not.toBeDefined();
+
+          done();
         });
     });
 
