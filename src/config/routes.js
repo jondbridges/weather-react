@@ -4,7 +4,7 @@ import { Route, IndexRoute } from 'react-router';
 import App from '../components/App';
 import HomePage from '../components/home/HomePage';
 import ForecastPage from '../components/forecast/ForecastPage';
-import DetailPage from '../components/forecast/detail/DetailPage';
+import DetailPage from '../components/detail/DetailPage';
 
 export default (
   <Route path="/" component={App}>

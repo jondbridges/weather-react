@@ -1,5 +1,5 @@
 import React from 'react';
-import ForecastDay from '../ForecastDay';
+import ForecastDay from '../forecast/ForecastDay';
 import './Detail.css';
 
 const Detail = ({forecastDay, cityState}) => {
