@@ -8,6 +8,7 @@ describe('getForecast', () => {
   describe('when successful API call', () => {
 
     beforeEach(() => {
+      // mock get promise return with test data
       axios.get = jest.fn(() => {
         return new Promise( resolve => resolve({data: weatherServiceTestData }) );
       });
@@ -55,6 +56,7 @@ describe('getForecast', () => {
   describe('when API call errors', () => {
 
     it('no days are returned', () => {
+      // mock get promise return with a failure
       axios.get = jest.fn(() => {
         return new Promise((resolve, reject) => reject());
       });
