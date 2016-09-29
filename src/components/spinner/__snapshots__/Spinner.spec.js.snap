@@ -1,4 +1,4 @@
-exports[`Spinner creates a fontawesome spinner with display text 1`] = `
+exports[`Spinner creates the spinner content with display text 1`] = `
 <div>
   <span
     className="fa fa-circle-o-notch fa-3x fa-spin Spinner-icon" />

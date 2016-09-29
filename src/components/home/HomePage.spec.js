@@ -1,12 +1,12 @@
 import React from 'react';
-import Spinner from './Spinner';
+import HomePage from './HomePage';
 import renderer from 'react-test-renderer';
 
-describe('Spinner', () => {
+describe('HomePage', () => {
 
-  it('creates the spinner content with display text', () => {
+  it('creates the home page content', () => {
     const component = renderer.create(
-      <Spinner displayText={"Loading..."} />
+      <HomePage />
     );
 
     const tree = component.toJSON();

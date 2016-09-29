@@ -1,0 +1,28 @@
+exports[`HomePage creates the home page content 1`] = `
+<div
+  className="HomePage-content">
+  <div
+    className="col-md-4 col-md-offset-4 text-center">
+    <div
+      className="HomePage-search-label">
+      Enter a City and State
+    </div>
+    <div>
+      <div
+        className="form-group">
+        <input
+          className="form-control"
+          onChange={[Function anonymous]}
+          placeholder="St Louis, MO"
+          type="text" />
+      </div>
+      <button
+        className="btn btn-success Search-btn-pad-left"
+        onClick={[Function anonymous]}
+        type="submit">
+        Get Weather
+      </button>
+    </div>
+  </div>
+</div>
+`;
