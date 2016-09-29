@@ -8,11 +8,9 @@ describe('getForecast', () => {
   describe('when successful API call', () => {
 
     beforeEach(() => {
-      spyOn(axios, 'get').and.returnValue(
-        new Promise(
-          resolve => { resolve({data: weatherServiceTestData }); }
-        )
-      );
+      axios.get = jest.fn(() => {
+        return new Promise( resolve => resolve({data: weatherServiceTestData }) )
+      });
     });
 
     it('calls api with city name and a count of 5', () => {
@@ -21,7 +19,7 @@ describe('getForecast', () => {
       WeatherService.getForecast(cityName);
 
       expect(axios.get)
-        .toHaveBeenCalledWith(FORECAST_URL + '&q=' + cityName + '&cnt=5');
+        .lastCalledWith(FORECAST_URL + '&q=' + cityName + '&cnt=5');
     });
 
     it('returns a list of 5 forecast days', () => {
@@ -51,22 +49,22 @@ describe('getForecast', () => {
           expect(isValidDate).toBe(true);
         }));
     });
+
   });
 
   describe('when API call errors', () => {
 
     it('no days are returned', () => {
-      spyOn(axios, 'get').and.returnValue(
-        new Promise(
-          (resolve, reject) => { reject('error occured'); }
-        )
-      );
+      axios.get = jest.fn(() => {
+        return new Promise((resolve, reject) => reject());
+      });
 
       WeatherService.getForecast('Boise, ID')
         .then(days => {
           expect(days).not.toBeDefined();
         });
     });
+
   });
 
 });
