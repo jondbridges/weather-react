@@ -13,3 +13,8 @@ To create a bundled production build:
 ```
 npm run build
 ```
+
+To run tests:
+```
+npm test
+```
