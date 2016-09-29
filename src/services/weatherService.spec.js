@@ -1,5 +1,5 @@
 import WeatherService, {FORECAST_URL} from './weatherService';
-import weatherServiceTestData from './weatherServiceTestData';
+import weatherServiceTestData from './weatherService.testdata';
 import axios from 'axios';
 import moment from 'moment';
 
