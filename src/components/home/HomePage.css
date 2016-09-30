@@ -1,6 +1,6 @@
 .HomePage-content {
   background-size: cover;
-  background-image: url('/images/pattern.svg');
+  background-image: url('pattern.svg');
   display: flex;
   align-items: center;
   height: 92%;
