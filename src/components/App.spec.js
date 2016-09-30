@@ -5,18 +5,18 @@ import Header from './header/Header';
 
 describe('App', () => {
 
-  let component, child;
+  let wrapper, child;
 
   beforeEach(() => {
     child = <p>Child node</p>;
-    component = shallow(<App children={child} />);
+    wrapper = shallow(<App children={child} />);
   });
 
   it('renders the Header', () => {
-    expect(component.contains(<Header />)).toEqual(true);
+    expect(wrapper.contains(<Header />)).toEqual(true);
   });
 
   it('renders the child node', () => {
-    expect(component.contains(child)).toEqual(true);
+    expect(wrapper.contains(child)).toEqual(true);
   });
 });

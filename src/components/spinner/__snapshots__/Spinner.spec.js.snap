@@ -1,3 +1,12 @@
+exports[`Spinner creates the spinner content 1`] = `
+<div>
+  <span
+    className="fa fa-circle-o-notch fa-3x fa-spin Spinner-icon" />
+  <span
+    className="Spinner-text" />
+</div>
+`;
+
 exports[`Spinner creates the spinner content with display text 1`] = `
 <div>
   <span

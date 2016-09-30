@@ -3,7 +3,7 @@ import './Forecast.css';
 
 const ForecastDay = ({forecastDay}) => {
   const weatherIconUrl = `${process.env.PUBLIC_URL}/images/weather-icons/${forecastDay.conditionIcon}.svg`;
-  
+
   return (
     <div className="Forecast-day">
       <img className="center-block Forecast-weather-icon" src={weatherIconUrl} alt="Weather" />
