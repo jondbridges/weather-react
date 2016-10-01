@@ -6,6 +6,7 @@ import Search from './Search';
 describe('SearchContainer', () => {
 
   let wrapper;
+  
   beforeEach(() => {
     wrapper = mount(
       <SearchContainer />,
@@ -37,7 +38,7 @@ describe('SearchContainer', () => {
 
   it('should not push new route when cityState is falsy', () => {
     expect(wrapper.state().cityState).toBeFalsy();
-    
+
     expect(wrapper.context().router.push).not.toHaveBeenCalled();
   });
 });
