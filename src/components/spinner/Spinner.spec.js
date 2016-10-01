@@ -5,21 +5,21 @@ import renderer from 'react-test-renderer';
 describe('Spinner', () => {
 
   it('creates the spinner content', () => {
-    const wrapper = renderer.create(
+    const component = renderer.create(
       <Spinner />
     );
 
-    const tree = wrapper.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('creates the spinner content with display text', () => {
-    const wrapper = renderer.create(
+    const component = renderer.create(
       <Spinner displayText={"Loading..."} />
     );
 
-    const tree = wrapper.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
