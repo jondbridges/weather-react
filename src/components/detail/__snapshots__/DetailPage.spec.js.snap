@@ -1,0 +1,49 @@
+exports[`DetailPage creates the DetailPage content 1`] = `
+<div>
+  <div
+    className="Detail-container">
+    <div
+      className="Forecast-day">
+      <img
+        alt="Weather"
+        className="center-block Forecast-weather-icon"
+        src="/images/weather-icons/undefined.svg" />
+      <div
+        className="text-center" />
+    </div>
+    <div
+      className="col-md-4 col-md-offset-4 text-center">
+      <p>
+        Seattle
+      </p>
+      <p>
+        lots of clouds
+      </p>
+      <p>
+        <label>
+          Max Temperature:
+        </label>
+         
+        88
+         °F
+      </p>
+      <p>
+        <label>
+          Min Temperature:
+        </label>
+         
+        44
+         °F
+      </p>
+      <p>
+        <label>
+          Humidity:
+        </label>
+         
+        100
+        %
+      </p>
+    </div>
+  </div>
+</div>
+`;
