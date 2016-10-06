@@ -19,6 +19,3 @@ To run tests:
 npm test
 ```
 
-![Home Page Image](docs/homepage.png?raw=true "Home Page")
-![Five Day Forecast Image](docs/forecast.png?raw=true "Five Day Forecast")
-![Forecast Day](docs/forecast-day.png?raw=true "Forecast Day")
